@@ -7,11 +7,11 @@ Purpose: Python code for assignment eight
 from graph import Euler
 from graph import Hamilton
 
-def main():
-    e = Euler()
+def main(): # main function mainly acts as a home base for the other file which has the euler and hamilton classes 
+    e = Euler() # initalizes the classes 
     h = Hamilton()
     
-    G1 = {
+    G1 = {          # dictionary's for each and every graph 
         1: [2, 4],
         2: [1, 3, 4],
         3: [2, 4],
@@ -57,7 +57,8 @@ def main():
         9: [6, 8]
     }
 
-    "Change everything above to use zero based indexing"
+    #Everything above really should be zero based indexing but meh -- Change everything above to use zero based indexing if you really care 
+    
     G6 = {
         0: [1, 2, 4],
         1: [0, 2, 4],
@@ -92,7 +93,7 @@ def main():
         5: [2, 3, 4]
     }
 
-
+    # Questions being answered 
     print("Question 1a:")
     print("Graph 1:")
     e.check_euler(G1, 5)
@@ -127,5 +128,5 @@ def main():
     h.is_hamiltonian_ore(G9)
 
 
-if __name__ == "__main__":
+if __name__ == "__main__":  # calls main 
     main()
